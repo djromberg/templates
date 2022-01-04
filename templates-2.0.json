@@ -35,8 +35,8 @@
 				}
 			],
 			"labels": [
-				{ "name": "traefik.http.routers.photoprism.tls", "value": "true" },
-				{ "name": "traefik.http.services.photoprism.loadbalancer.server.port", "value": "2342" }
+				{ "name": "traefik.http.routers.media.tls", "value": "true" },
+				{ "name": "traefik.http.services.media.loadbalancer.server.port", "value": "2342" }
 			]
 		},
 		{
