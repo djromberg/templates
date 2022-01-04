@@ -11,23 +11,27 @@
 			"env":[
 				{
 					"name":"PHOTOPRISM_ADMIN_PASSWORD",
-					"label":"Admin password"
+					"label":"Admin password",
+					"description":"The adminstrator password for this instance"
 				},
 				{
 					"name":"PHOTOPRISM_DETECT_NSFW",
-					"value":"false"
+					"label":"Detect offensive content",
+					"description":"Whether to detect offensive content and label images as private",
+					"preset":"false"
 				},
 				{
 					"name":"PHOTOPRISM_UPLOAD_NSFW",
-					"value":"true"
+					"label":"Allow offensive content",
+					"description":"Whether to allow uploading offensive content",
+					"preset":"true"
 				}
 			],
-			"ports":[
-				"2342/tcp"
-			],
+			"ports":[],
 			"volumes":[
 				{
-					"container":"/photoprism/storage"
+					"container":"/photoprism/storage",
+					"bind": "/path/on/host"
 				}
 			],
 			"labels": [
