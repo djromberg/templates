@@ -15,6 +15,12 @@
 					"description":"The adminstrator password for this instance"
 				},
 				{
+					"name":"PHOTOPRISM_PUBLIC",
+					"label":"Public",
+					"description":"Public instances are accessible without credentials",
+					"default":"false"
+				},
+				{
 					"name":"PHOTOPRISM_DETECT_NSFW",
 					"label":"Detect offensive content",
 					"description":"Whether to detect offensive content and label images as private",
@@ -31,6 +37,14 @@
 			"volumes":[
 				{
 					"container":"/photoprism/storage",
+					"bind": "/path/on/host"
+				},
+				{
+					"container":"/photoprism/originals",
+					"bind": "/path/on/host"
+				},
+				{
+					"container":"/photoprism/import",
 					"bind": "/path/on/host"
 				}
 			],
