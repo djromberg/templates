@@ -18,13 +18,13 @@
 					"name":"PHOTOPRISM_DETECT_NSFW",
 					"label":"Detect offensive content",
 					"description":"Whether to detect offensive content and label images as private",
-					"preset":"false"
+					"default":"false"
 				},
 				{
 					"name":"PHOTOPRISM_UPLOAD_NSFW",
 					"label":"Allow offensive content",
 					"description":"Whether to allow uploading offensive content",
-					"preset":"true"
+					"default":"true"
 				}
 			],
 			"ports":[],
