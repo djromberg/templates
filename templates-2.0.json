@@ -3,6 +3,40 @@
 	"templates":[
 		{
 			"type":1,
+			"title":"PhotoPrism",
+			"description":"Browse Your Life in Pictures",
+			"platform":"linux",
+			"logo":"https://photoprism.app/static/icons/logo.svg",
+			"image":"photoprism/photoprism:20211215",
+			"env":[
+				{
+					"name":"PHOTOPRISM_ADMIN_PASSWORD",
+					"label":"Admin password"
+				},
+				{
+					"name":"PHOTOPRISM_DETECT_NSFW",
+					"value":"false"
+				},
+				{
+					"name":"PHOTOPRISM_UPLOAD_NSFW",
+					"value":"true"
+				}
+			],
+			"ports":[
+				"2342/tcp"
+			],
+			"volumes":[
+				{
+					"container":"/photoprism/storage"
+				}
+			],
+			"labels": [
+				{ "name": "traefik.http.routers.photoprism.tls", "value": "true" },
+				{ "name": "traefik.http.services.photoprism.loadbalancer.server.port", "value": "2342" }
+			]
+		},
+		{
+			"type":1,
 			"title":"Registry",
 			"description":"Docker image registry",
 			"categories":[
