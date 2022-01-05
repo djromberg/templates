@@ -44,7 +44,8 @@
 				},
 				{
 					"name":"PHOTOPRISM_DATABASE_DRIVER",
-					"preset":"mysql"
+					"default":"mysql",
+					"preset":"true"
 				},
 				{
 					"name":"PHOTOPRISM_DATABASE_SERVER",
