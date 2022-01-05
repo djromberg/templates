@@ -110,6 +110,9 @@
 					"container":"/var/lib/mysql",
 					"bind": "/mnt/volumes/mariadb"
 				}
+			],
+			"labels": [
+				{ "name": "traefik.enable", "value": "false" }
 			]
 		}
 	]
